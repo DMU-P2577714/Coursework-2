@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <title> Video Editing Portfolio </title>
+  </head>
+  <body>
+<h1> Video Editing Portfolio</h1>
+
+<nav>
+  <div class="topnav" id="myTopnav">
+    <a href="home.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="showreel.html">Showreel</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+    </nav>
+
+
+<h2> featured edit</h2>
+
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="videos\doha cat.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+
+<h3> self taught video editor </h3>
+<h4> Kevin Martin </h4>
+
+  </body>
+</html>
